@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1649531400 source:c:\users\milko\documents\hw\programaci”n estructurada\programas\09_04_22_zap653_p6_poke_batalla\main.cpp
+	<iostream>
+	<string>
+	<windows.h>
+	<chrono>
+	<thread>
+	<random>
+
