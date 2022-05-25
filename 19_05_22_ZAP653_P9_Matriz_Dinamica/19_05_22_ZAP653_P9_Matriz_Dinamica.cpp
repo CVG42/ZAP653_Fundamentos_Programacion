@@ -7,6 +7,7 @@
 
 int main()
 {
+	srand(time(NULL));
 	int** matriz;
 	int matriz1[2][3],filas, columnas;
 	bool ans;
