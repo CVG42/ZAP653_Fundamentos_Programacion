@@ -12,14 +12,13 @@ int main()
 	int matriz1[2][3],filas, columnas;
 	bool ans;
 
-	std::cout << "Estos son los datos aleatorios de una matriz 2x3: \n";
+	std::cout << "Ingrese los elementos de la matriz 2x3: \n";
 	for (int i = 0; i < 2; i++)
 	{
 		for (int j = 0; j < 3; j++)
 		{
-			matriz1[i][j] = rand() % 9;
-			std::cout << "[" << i << "]" << "[" << j << "] = " << matriz1[i][j];
-			std::cout << "\n";
+			std::cout << "[" << i << "]" << "[" << j << "] = ";
+			std::cin >> matriz1[i][j];
 		}
 	}
 
