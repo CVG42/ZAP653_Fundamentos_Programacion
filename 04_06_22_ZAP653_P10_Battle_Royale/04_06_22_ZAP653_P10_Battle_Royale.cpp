@@ -4,8 +4,7 @@
 #include <iostream>
 #include <string>
 #include <Windows.h>
-#include <algorithm>
-#include <vector>
+#include <random>
 
 struct player
     {
@@ -24,35 +23,19 @@ void jugadores()
 
 void stats()
 {
-    int poder[11] = { 0,1,2,3,4,5,6,7,8,9,10 };
-    constexpr int size = 7;
-    
-    for (int i = 0; i <= size; i++)
+    for (int i = 0; i <= 7; i++)
     {
-        std::random_shuffle(std::begin(poder), std::end(poder));;
-        n[i].hp = poder[i];
-    } 
-    for (int i = 0; i <= size; i++)
-    {
-        std::random_shuffle(std::begin(poder), std::end(poder));;
-        n[i].atk = poder[i];
-    }
-    for (int i = 0; i <= size; i++)
-    {
-        std::random_shuffle(std::begin(poder), std::end(poder));;
-        n[i].def = poder[i];
-    }
-    for (int i = 0; i <= size; i++)
-    {
-        std::random_shuffle(std::begin(poder), std::end(poder));;
-        n[i].armor = poder[i];
+        n[i].hp = rand() % 10;
+        n[i].atk = rand() % 10;
+        n[i].def = rand() % 10;
+        n[i].armor = rand() % 10;
         std::cout << "--- Jugador #" << i + 1 << ": " << n[i].jugador << " ---\n";
         std::cout << "  -Su HP es: " << n[i].hp << "\n";
         std::cout << "  -Su ataque es: " << n[i].atk << "\n";
         std::cout << "  -Su defensa es: " << n[i].def << "\n";
         std::cout << "  -Su armadura es: " << n[i].armor << "\n";
         std::cout << "\n";
-    }
+    }    
 }
 
 void max_Stats(int maxHP, int maxATK, int maxDEF, int maxARMOR, int wHP, int wATK, int wDEF, int wARMOR, int minHP, int minATK, int minDEF, int minARMOR, int lHP, int lATK, int lDEF, int lArmor)
@@ -130,6 +113,4 @@ int main()
     stats();
     system("pause");
     max_Stats(maxHP, maxATK, maxDEF, maxARMOR, wHP, wATK, wDEF, wARMOR, minHP, minATK, minDEF, minARMOR, lHP, lATK, lDEF, lArmor);
-
-
 }
