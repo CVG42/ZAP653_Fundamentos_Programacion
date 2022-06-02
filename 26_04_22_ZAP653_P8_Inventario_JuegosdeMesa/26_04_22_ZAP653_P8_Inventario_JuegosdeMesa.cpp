@@ -27,7 +27,7 @@ int main()
                 std::cin >> year[i];
                 if (!std::cin.good())
                 {
-                    std::cout << "Ingresa un numero entero";
+                    std::cout << "Ingresa un numero entero\n";
                     std::cin.clear();
                     std::cin.ignore(std::numeric_limits<int>::max(), '\n');
                 }
