@@ -38,7 +38,5 @@ int main()
     std::cout << "\n";
     
     } while (ans == 1);
-
-
 }
 
