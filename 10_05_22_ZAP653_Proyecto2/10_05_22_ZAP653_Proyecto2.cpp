@@ -58,12 +58,13 @@ int main()
     setlocale(LC_ALL, "spanish");
 
     int ans=0;
-    string intro; string ln;
+    string intro; string ln; string name;
     ifstream file("intro.txt");
 
     PlaySound(TEXT("TextSFX.wav"), NULL, SND_LOOP | SND_ASYNC);
     type("Este es un proyecto hecho por Cristina Vera.\nEs una aventura de texto donde tus decisiones van a cambiar el rumbo de la historia.\n");
     PlaySound(NULL, NULL, 0);
+    
     system("pause");
     system("CLS");
     
@@ -81,6 +82,16 @@ int main()
     cout << "\n";
     cout << setw(165) << right << "-Them\n";
     PlaySound(NULL, NULL, 0);
+
+    system("pause");
+    system("CLS");
+    
+    PlaySound(TEXT("TextSFX.wav"), NULL, SND_LOOP | SND_ASYNC);
+    type("Escribe el nombre de tu personaje: ");
+    getline(cin, name); cout << "\n";
+    type("Bienvenido "); type(name);
+    PlaySound(NULL, NULL, 0);
+
   
 }
 
