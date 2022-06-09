@@ -18,6 +18,7 @@
 #include <fstream>
 #include <string>
 #include <iomanip> 
+#include <cstdlib>
 
 using namespace std;
 
@@ -62,7 +63,7 @@ int main()
 {
     setlocale(LC_ALL, "spanish");
 
-    int ans=0;
+    int ans = 0, choice1=0, choice2=0, choice3=0;
     string intro; string ln; string name;
     ifstream file("intro.txt");
 
@@ -123,16 +124,56 @@ int main()
         switch (ans)
         {
         case 1:
-            type("Pronto jaló de la caña y después de mucho luchar, con bastante esfuerzo, logró sacar un gran pez que lo acompañaría esa noche.\n");  
+            choice1 = 1;  
             break;
         case 2:
-            type("test"); break;
+            choice1 = 2;
+            type("En algún momento llegará el pez indicado\n");
+            break;
         default:
             cout << "Ingrese opcion valida. \n"; break;
         }
     } while (ans != 1 && ans != 2);
 
-
+    if (choice1 == 2)
+    {
+        return(0);
+    }
+    else {
+        cout<<"\n";
+    }
+    
+    type("Pronto jaló de la caña y después de mucho luchar, con bastante esfuerzo, logró sacar un gran pez que lo acompañaría esa noche.\n");
+    type("Sonrío y se dio las gracias a sí mismo, tomó su caña, y guardó el libro en una bolsa tejida que llevaba con él y se dirigió al lugar donde había dejado su lancha.\n");
+    type("Cuando arribó a aquel sitio, se sorprendió, su lancha no estaba ahí, se metió a esa parte del lago para comprobar de que no se había hundido, pero no había señales. ¿Se la habrán robado? Pensaba que él era el único en ese lugar.\n"); 
+    type("Quién sería capaz de robar aquel pedazo viejo de madera flotante, con un viejo motor que hacía bastante ruido, que hasta ensordecía a quien fuera manejándola.\n");
+    type("¿Qué deseas hacer?\n\n"); cout << "1. Ir a buscar la lancha.\n2.Hacer nada.\n";
+    
+    do
+    {
+        cin >> ans; verify(ans);
+        switch (ans)
+        {
+         case 1:
+            choice2 = 1;
+            break;
+         case 2:
+            choice2 = 2;
+            type(name); type(" se quedó sentado y contempló el cielo estrellado esa noche. De todas maneras tenía su pescado.\n");
+            break;
+         default:
+            cout << "Ingrese opcion valida. \n"; break;
+        }
+    } while (ans != 1 && ans != 2);
+    
+    if (choice2 == 2) 
+    {
+       return(0);
+    }
+    else
+    {
+        cout << "\n";
+    }
 
   
 }
